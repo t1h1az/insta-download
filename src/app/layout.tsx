@@ -40,11 +40,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ReactQueryProvider>
-            <Navbar />
             <main className="relative h-[calc(100vh-6rem)] overflow-y-auto px-2 sm:px-4">
               {children}
             </main>
-            <Footer />
           </ReactQueryProvider>
         </ThemeProvider>
       </body>
