@@ -6,7 +6,7 @@ const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL ?? "";
 const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN ?? "";
 
 // Enable/Disable ratelimit
-const enabled = USE_UPSTASH === "true";
+const enabled = USE_UPSTASH === "false";
 
 // Ratelimit configs
 const maxRequests = 5; // Max requests every requests window

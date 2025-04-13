@@ -65,6 +65,7 @@ export const encodeGraphqlRequestData = (shortcode: string) => {
 
 export const formatGraphqlJson = (data: MediaData) => {
   const filename = getIGVideoFileName();
+  console.log(data.dimensions);
   const width = data.dimensions.width.toString();
   const height = data.dimensions.height.toString();
   const videoUrl = data.video_url;
@@ -93,6 +94,8 @@ export const formatPageJson = (postHtml: CheerioAPI) => {
     postHtml("meta[property='og:video:width']").attr("content") ?? "";
   const height =
     postHtml("meta[property='og:video:height']").attr("content") ?? "";
+    console.log('height', height);
+    console.log('height', width); 
 
   const filename = getIGVideoFileName();
 

@@ -12,6 +12,7 @@ import { INSTAGRAM_CONFIGS } from "./constants";
 import { formatGraphqlJson, formatPageJson, getPostIdFromUrl } from "./utils";
 
 const getVideoJsonFromHTML = async (postId: string) => {
+  console.log('getVideoJsonFromHTML');
   const data = await getPostPageHTML({ postId });
 
   const postHtml = load(data);
@@ -26,6 +27,7 @@ const getVideoJsonFromHTML = async (postId: string) => {
 };
 
 const getVideoJSONFromGraphQL = async (postId: string) => {
+  console.log('getVideoJSONFromGraphQL');
   const data = await getPostGraphqlData({ postId });
 
   const mediaData = data.data?.xdt_shortcode_media;

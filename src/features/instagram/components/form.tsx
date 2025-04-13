@@ -74,7 +74,7 @@ export function InstagramVideoForm() {
                   <Input
                     disabled={isPending}
                     type="url"
-                    placeholder="Paste your Instagram link here..."
+                    placeholder="Hier den Instagram Link einfügen..."
                     className="h-12 w-full sm:pr-28"
                     {...field}
                   />
