@@ -21,7 +21,7 @@ export default function HomePage() {
       </h1>
       </section>
       <Link className="text-center mb-8" style={{cursor: "pointer"}} href="https://www.instagram.com/marketer.studios/">@marketerstudios </Link>
-      <h2 className="text-balance mb-8 text-center text-4xl">Growth Kit</h2>
+      {/* <h2 className="text-balance mb-8 text-center text-4xl">Growth Kit</h2> */}
       <section className="flex flex-col items-center justify-center gap-4 mb-8">
         <InstagramVideoForm />
       </section>
