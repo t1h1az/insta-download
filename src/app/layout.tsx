@@ -8,6 +8,7 @@ import { ReactQueryProvider } from "@/components/providers/react-query-provider"
 
 import { cn } from "@/lib/utils";
 
+import styles from './styles.module.css'
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -20,6 +21,9 @@ export const metadata: Metadata = {
   description: "Download Instagram Videos",
 };
 
+const style = {
+
+}
 export default function RootLayout({
   children,
 }: {
@@ -40,11 +44,14 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ReactQueryProvider>
-            <main className="relative h-[calc(100vh-6rem)] overflow-y-auto px-2 sm:px-4">
+            {/* <main className="main relative h-[calc(100vh-6rem)] overflow-y-auto px-2 sm:px-4"> */}
+            <main className={styles.main}>
               {children}
             </main>
+            <footer></footer>
           </ReactQueryProvider>
         </ThemeProvider>
+        
       </body>
     </html>
   );
