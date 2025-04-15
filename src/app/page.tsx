@@ -6,9 +6,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col py-8">
       <section className="flex flex-col py-8">
-      <div           className="flex justify-center"
-      >
-
+      <div className="flex justify-center">
       <Image
           src="/marketer-studios-logo.png"
           width={200}
@@ -20,7 +18,7 @@ export default function HomePage() {
           MARKETER STUDIOS
       </h1>
       </section>
-      <Link className="text-center mb-8" style={{cursor: "pointer"}} href="https://www.instagram.com/marketer.studios/">@marketerstudios </Link>
+      <Link className="text-center mb-8" style={{cursor: "pointer"}} href="https://www.instagram.com/marketer.studios/">@marketer.studios </Link>
       {/* <h2 className="text-balance mb-8 text-center text-4xl">Growth Kit</h2> */}
       <section className="flex flex-col items-center justify-center gap-4 mb-8">
         <InstagramVideoForm />
