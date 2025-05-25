@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { DM_Sans as FontSans } from "next/font/google";
+import backgroundImage from "../../public/images/porsches-and-horses.png";
 
 import { Navbar, Footer } from "@/components/layout";
 
@@ -36,6 +37,12 @@ export default function RootLayout({
           fontSans.variable,
           "overflow-x-hidden bg-background font-sans antialiased"
         )}
+        style={{ 
+          background: `url(${backgroundImage.src})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+      }}
       >
         <ThemeProvider
           attribute="class"
