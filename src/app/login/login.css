@@ -30,9 +30,16 @@
 
 }
 .headline--login {
-        color: white;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 42px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.headline--login:nth-last-child(1) {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 42px;
     font-weight: 400;
     letter-spacing: 0;
 }

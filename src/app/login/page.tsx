@@ -6,7 +6,6 @@ import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
 import { useRouter } from 'next/navigation';
 import "./login.css";
 
-
 export default function LoginPage() {
   const supabase = createClient();  
   const router = useRouter()
@@ -51,6 +50,7 @@ if (error) {
       <div
         className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
       >
+      <h1 className="headline--login">Instagram Video Downloader</h1>
       <h1 className="headline--login">Login</h1>
       </div>
       <div className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8">
