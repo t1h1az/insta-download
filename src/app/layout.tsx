@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 
 import styles from './styles.module.css'
 import "./globals.css";
+import Link from "next/link";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -19,13 +20,10 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Instagram Video Downloader",
-  description: "Download Instagram Videos",
+  title: "AEY Studios - Instagram Video Downloader",
+  description: "Download Instagram Videos with AEY Studios",
 };
 
-const style = {
-
-}
 export default function RootLayout({
   children,
 }: {
@@ -36,7 +34,8 @@ export default function RootLayout({
       <body
         className={cn(
           fontSans.variable,
-          "overflow-x-hidden bg-background font-sans antialiased h-full flex flex-col",
+          styles.body,
+          "overflow-x-hidden bg-background items-left font-sans antialiased h-full flex flex-col shrink-0 md:w-5xl",
         )}
         style={{
           background: `url(${backgroundImage.src})`,
@@ -53,16 +52,16 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ReactQueryProvider>
-            {/* <main className="main relative h-[calc(100vh-6rem)] overflow-y-auto px-2 sm:px-4"> */}
             <header className={styles.header}>
+              <Link href="https://app.aey-studios.com" className="flex md:w-5xl">
               <Image
                           src="/images/new-logo.png"
                           width={200}
                           height={200}
                           alt="AEY Studios Logo"
                           className="w-40"
-                          /></header>
-            <main className={"flex h-full justify-center overflow-y-auto px-2 sm:px-4"}>
+                          /></Link></header>
+            <main className={"flex h-full justify-center overflow-y-auto px-2 sm:w-full"}>
               {children}
             </main>
             <Footer></Footer>

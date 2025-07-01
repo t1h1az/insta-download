@@ -46,7 +46,7 @@ if (error) {
   return (
     <div className="container--login flex flex-col items-center">
       <div
-        className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
+        className="bg-accent/40 my-4 flex max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
       >
 
       <h1 className="headline--login">Registration</h1>
