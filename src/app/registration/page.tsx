@@ -52,7 +52,7 @@ export default function LoginPage() {
         className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
       >
       <h1 className="headline--login">Instagram Video Downloader</h1>
-      <h1 className="headline--login">Registration</h1>
+      <h1 className="headline--login">Registrierung</h1>
       </div>
       <div className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8">
         <div className="input__field flex w-full flex-col relative">
@@ -107,7 +107,7 @@ export default function LoginPage() {
           onClick={handleLogin}
           className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
         >
-          Sign Up
+          Registrieren
         </button>
          <p className={"md:w-[400px] flex justify-end mt-2"}>
 

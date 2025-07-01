@@ -52,7 +52,7 @@ if (error) {
         className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
       >
       <h1 className="headline--login">Instagram Video Downloader</h1>
-      <h1 className="headline--login">Login</h1>
+      <h1 className="headline--login">Anmeldung</h1>
       </div>
       <div className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8">
         <div className="input__field flex w-full flex-col relative">
@@ -108,7 +108,7 @@ if (error) {
           onClick={handleLogin}
           className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
         >
-          Login
+          Anmelden
         </button>
         <p className={"md:w-[400px] flex justify-end mt-2"}>
 
