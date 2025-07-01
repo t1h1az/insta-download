@@ -24,23 +24,6 @@ export function Navbar() {
         <MobileNav className="md:hidden" />
         <div className="ml-auto flex items-center gap-4">
           <div className="hidden items-center gap-4 text-lg sm:gap-8 sm:pr-8 md:flex">
-            <Link href="/" className="hover:underline">
-              Home
-            </Link>
-            <Link
-              target="_blank"
-              href="https://github.com/riad-azz/instagram-video-downloader"
-              className="hover:underline"
-            >
-              Github
-            </Link>{" "}
-            <Link
-              target="_blank"
-              href="https://github.com/riad-azz"
-              className="hover:underline"
-            >
-              Creator
-            </Link>
           </div>
           <ThemeToggle />
         </div>

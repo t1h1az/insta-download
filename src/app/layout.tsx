@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { DM_Sans as FontSans } from "next/font/google";
 import backgroundImage from "../../public/images/porsches-and-horses.png";
+import Link from "next/link";
 
-import { Navbar, Footer } from "@/components/layout";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ReactQueryProvider } from "@/components/providers/react-query-provider";
@@ -37,12 +37,12 @@ export default function RootLayout({
           fontSans.variable,
           "overflow-x-hidden bg-background font-sans antialiased"
         )}
-        style={{ 
+        style={{
           background: `url(${backgroundImage.src})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
-      }}
+        }}
       >
         <ThemeProvider
           attribute="class"
@@ -55,10 +55,9 @@ export default function RootLayout({
             <main className={styles.main}>
               {children}
             </main>
-            <footer></footer>
           </ReactQueryProvider>
         </ThemeProvider>
-        
+
       </body>
     </html>
   );

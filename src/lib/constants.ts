@@ -25,6 +25,6 @@ export const externalLinks: NavLink[] = [
   },
   {
     name: "Creator",
-    href: "https://www.instagram.com/riadazz/",
+    href: "https://www.instagram.com/wealtholymp/",
   },
 ];
