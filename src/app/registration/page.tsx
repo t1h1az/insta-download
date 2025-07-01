@@ -111,13 +111,13 @@ export default function LoginPage() {
         </button>
          <p className={"md:w-[400px] flex justify-end mt-2"}>
 
-        <span className='text-sm'>Du hast schon einen Account? Hier geht's zur 
-                  <span> </span>
-
+        <span className='text-sm'>Du hast schon einen Account? Hier geht&apos;s zur 
         <span 
           onClick={() => router.push('/login')}
-          className="text-sm text-blue-500 cursor-pointer">
-           Anmeldung
+          className="text-sm text-blue-500 cursor-pointer"
+          style={{top: '1px', position: 'relative'}}
+        >
+           &nbsp;Anmeldung
         </span>
             </span>
             </p>

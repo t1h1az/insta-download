@@ -112,12 +112,12 @@ if (error) {
         </button>
         <p className={"md:w-[400px] flex justify-end mt-2"}>
 
-        <span className='text-sm'>Du hast noch keinen Account? Hier geht's zur 
-        <span> </span>
+        <span className='text-sm'>Du hast noch keinen Account? Hier geht&apos;s zur 
         <span 
           onClick={() => router.push('/registration')}
-          className="text-sm text-blue-500 cursor-pointer">
-          Registrierung
+          className="text-sm text-blue-500 cursor-pointer"
+          style={{top: '1px', position: 'relative'}}>
+          &nbsp;Registrierung
         </span>
             </span>
             </p>
