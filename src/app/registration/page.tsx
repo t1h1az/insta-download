@@ -4,6 +4,7 @@ import { createClient } from '@/lib/supabase/client';
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
 import "./registration.css";
+import { redirect } from 'next/navigation';
 
 
 export default function LoginPage() {
@@ -33,14 +34,14 @@ export default function LoginPage() {
       email,
       password,
     });
-if (error) {
+    if (error) {
       setError(error.message);
     } else {
       if (newsletter) {
         console.log('✅ Newsletter signup checked — handle backend logic here.');
         // Optional: Call API to subscribe user to your newsletter
       }
-      alert('Login successful!');
+      redirect('/registration/success'); // Redirect to success page
     }
   };
   return (

@@ -3,14 +3,17 @@
 import { createClient } from '@/lib/supabase/client';
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
+import { useRouter } from 'next/navigation';
 import "./login.css";
 
 
 export default function LoginPage() {
-  const supabase = createClient();
+  const supabase = createClient();  
+  const router = useRouter()
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+
+  const [email, setEmail] = useState('beetz.thomas@googlemail.com');
+  const [password, setPassword] = useState('Liebe1234');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [newsletter, setNewsletter] = useState(false); // ✅ New state
@@ -40,7 +43,7 @@ if (error) {
         console.log('✅ Newsletter signup checked — handle backend logic here.');
         // Optional: Call API to subscribe user to your newsletter
       }
-      alert('Login successful!');
+      router.push('/instagram'); // Redirect to Instagram page
     }
   };
   return (
@@ -59,7 +62,8 @@ if (error) {
             name="email" 
             type="email" 
             required
-            placeholder='' value={email}
+            placeholder=''
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <span className="floating-label">Emailadresse</span>
