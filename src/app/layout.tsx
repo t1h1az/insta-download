@@ -1,7 +1,6 @@
 import { Metadata} from "next";
 import { DM_Sans as FontSans } from "next/font/google";
 import backgroundImage from "../../public/images/porsches-and-horses.png";
-import Link from "next/link";
 import { Footer } from "@/components/layout";
 import Image from 'next/image'
 
@@ -57,7 +56,7 @@ export default function RootLayout({
             {/* <main className="main relative h-[calc(100vh-6rem)] overflow-y-auto px-2 sm:px-4"> */}
             <header className={styles.header}>
               <Image
-                          src="/images/aey-studios-logo-white.png"
+                          src="/images/new-logo.png"
                           width={200}
                           height={200}
                           alt="AEY Studios Logo"
