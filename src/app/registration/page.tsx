@@ -49,6 +49,7 @@ export default function LoginPage() {
       <div
         className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
       >
+      <h1 className="headline--login">Instagram Video Downloader</h1>
       <h1 className="headline--login">Registration</h1>
       </div>
       <div className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8">
