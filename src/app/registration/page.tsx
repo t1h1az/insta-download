@@ -3,7 +3,7 @@
 import { createClient } from '@/lib/supabase/client';
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
-import "./login.css";
+import "./registration.css";
 
 
 export default function LoginPage() {
@@ -29,7 +29,7 @@ export default function LoginPage() {
       return;
     }
 
-    const { error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabase.auth.signUp({
       email,
       password,
     });
@@ -49,7 +49,7 @@ if (error) {
         className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
       >
 
-      <h1 className="headline--login">Login</h1>
+      <h1 className="headline--login">Registration</h1>
       </div>
       <div
         className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8"
@@ -106,7 +106,7 @@ if (error) {
           onClick={handleLogin}
           className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
         >
-          Login
+          Sign Up
         </button>
       </div>
     </div>

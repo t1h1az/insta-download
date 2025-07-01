@@ -1,7 +1,9 @@
-import { Metadata } from "next";
+import { Metadata} from "next";
 import { DM_Sans as FontSans } from "next/font/google";
 import backgroundImage from "../../public/images/porsches-and-horses.png";
 import Link from "next/link";
+import { Footer } from "@/components/layout";
+import Image from 'next/image'
 
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -35,13 +37,14 @@ export default function RootLayout({
       <body
         className={cn(
           fontSans.variable,
-          "overflow-x-hidden bg-background font-sans antialiased"
+          "overflow-x-hidden bg-background font-sans antialiased h-full flex flex-col",
         )}
         style={{
           background: `url(${backgroundImage.src})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundAttachment: 'fixed',
+          height: '100vh',
         }}
       >
         <ThemeProvider
@@ -52,12 +55,20 @@ export default function RootLayout({
         >
           <ReactQueryProvider>
             {/* <main className="main relative h-[calc(100vh-6rem)] overflow-y-auto px-2 sm:px-4"> */}
-            <main className={styles.main}>
+            <header className={styles.header}>
+              <Image
+                          src="/images/aey-studios-logo-white.png"
+                          width={200}
+                          height={200}
+                          alt="AEY Studios Logo"
+                          className="w-40"
+                          /></header>
+            <main className={"flex h-full justify-center overflow-y-auto px-2 sm:px-4"}>
               {children}
             </main>
+            <Footer></Footer>
           </ReactQueryProvider>
         </ThemeProvider>
-
       </body>
     </html>
   );

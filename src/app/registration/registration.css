@@ -1,0 +1,113 @@
+
+
+.input__field {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+.container--login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+.cta--login {
+    width: 400px;
+    height: 60px;
+    border: 1px solid var(--main-color);
+    color: var(--black-color);
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+
+}
+.headline--login {
+        color: white;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.input__field .input {
+    height: 60px;
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 18px;
+    color: var(--main-color);
+    box-sizing: border-box;
+    border: 1px solid black;
+    opacity: 0.4;
+    border-radius: 5px;
+}
+.floating-label {
+    color: var(--main-color);
+    position: absolute;
+    pointer-events: none;
+    left: 18px;
+    top: 18px;
+    -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.input__field .input:focus~.floating-label,
+.input__field .input.text--valid~.floating-label,
+.input__field .input.text--invalid~.floating-label,
+.input__field .input.text--processing~.floating-label,
+.input__field .input.text--prefilled~.floating-label,
+.input__field .input:not(:placeholder-shown)~.floating-label,
+input[type="text"]:disabled~.floating-label {
+    top: 5px;
+    left: 15px;
+    font-size: 14px;
+    opacity: 1;
+}
+
+.input__field .input:focus,
+.input__field .input.text--valid,
+.input__field .input.text--invalid,
+.input__field .input.text--processing,
+.input__field .input.text--prefilled,
+.input__field .input:not(:placeholder-shown),
+input[type="text"]:disabled{
+    padding: 26px 14px 14px;
+}
+
+.cta--login:hover {
+    background-color: var(--secondary-color);
+    color: var(--black-color);
+    border: 1px solid var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .container--login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        padding: 20px;
+    }
+    .input__field {
+        width: 100%;
+    }
+    .cta--login {
+        width: 100%;
+    }
+    .headline--login {
+        font-size: 32px;
+    }
+    .input__field .input {
+        font-size: 16px;
+    }
+    
+}
