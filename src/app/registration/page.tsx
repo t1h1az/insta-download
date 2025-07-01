@@ -4,11 +4,13 @@ import { createClient } from '@/lib/supabase/client';
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
 import "./registration.css";
-import { redirect } from 'next/navigation';
+import { redirect, useRouter} from 'next/navigation';
+
 
 
 export default function LoginPage() {
   const supabase = createClient();
+  const router = useRouter()
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -107,6 +109,17 @@ export default function LoginPage() {
         >
           Sign Up
         </button>
+         <p className={"md:w-[400px] flex justify-end mt-2"}>
+
+        <span className='text-sm'>Du hast schon einen Account? Hier geht's zur 
+          
+        <span 
+          onClick={() => router.push('/login')}
+          className="text-sm text-blue-500 cursor-pointer">
+           &nbsp;Anmeldung
+        </span>
+            </span>
+            </p>
       </div>
     </div>
   )

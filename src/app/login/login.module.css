@@ -1,0 +1,9 @@
+.infoBox {
+    width: 400px;
+}
+
+@media  screen and (max-width: 768px) {
+    .infoBox {
+        width: 400px;
+    }
+}

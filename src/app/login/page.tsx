@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
 import { useRouter } from 'next/navigation';
 import "./login.css";
+import { cn } from '@/lib/utils';
 
 export default function LoginPage() {
   const supabase = createClient();  
@@ -109,6 +110,17 @@ if (error) {
         >
           Login
         </button>
+        <p className={"md:w-[400px] flex justify-end mt-2"}>
+
+        <span className='text-sm'>Du hast noch keinen Account? Hier geht's zur 
+          
+        <span 
+          onClick={() => router.push('/registration')}
+          className="text-sm text-blue-500 cursor-pointer">
+           &nbsp;Registrierung
+        </span>
+            </span>
+            </p>
       </div>
     </div>
   )

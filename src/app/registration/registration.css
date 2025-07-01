@@ -32,7 +32,7 @@
 .headline--login {
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 400;
     letter-spacing: 0;
 }
@@ -111,8 +111,19 @@ input[type="text"]:disabled{
         width: 100%;
     }
     .headline--login {
-        font-size: 32px;
-    }
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.headline--login:nth-last-child(1) {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
     .input__field .input {
         font-size: 16px;
     }

@@ -7,6 +7,7 @@
     max-width: 400px;
     margin-bottom: 20px;
 }
+
 .container--login {
         display: flex;
         flex-direction: column;
@@ -32,7 +33,7 @@
 .headline--login {
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 400;
     letter-spacing: 0;
 }
@@ -97,6 +98,20 @@ input[type="text"]:disabled{
 }
 
 @media (max-width: 768px) {
+    .headline--login {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.headline--login:nth-last-child(1) {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
     .container--login {
         display: flex;
         flex-direction: column;
@@ -109,9 +124,6 @@ input[type="text"]:disabled{
     }
     .cta--login {
         width: 100%;
-    }
-    .headline--login {
-        font-size: 32px;
     }
     .input__field .input {
         font-size: 16px;

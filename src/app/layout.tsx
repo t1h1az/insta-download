@@ -55,7 +55,7 @@ export default function RootLayout({
             <header className={cn(styles.header, "flex w-full items-center px-4 py-2 sm:justify-center md:justify-between")}>
               <Link href="https://app.aey-studios.com" className="flex md:w-5xl">
               <Image
-                          src="/images/new-logo.png"
+                          src="/images/aey-logo-white.png"
                           width={200}
                           height={200}
                           alt="AEY Studios Logo"
