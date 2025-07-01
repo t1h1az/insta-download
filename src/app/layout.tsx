@@ -52,14 +52,14 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ReactQueryProvider>
-            <header className={styles.header}>
+            <header className={cn(styles.header, "flex w-full items-center px-4 py-2 sm:justify-center md:justify-between")}>
               <Link href="https://app.aey-studios.com" className="flex md:w-5xl">
               <Image
                           src="/images/new-logo.png"
                           width={200}
                           height={200}
                           alt="AEY Studios Logo"
-                          className="w-40"
+                          className="md:w-40 w-60 h-auto"
                           /></Link></header>
             <main className={"flex h-full justify-center overflow-y-auto px-2 sm:w-full"}>
               {children}

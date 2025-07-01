@@ -48,12 +48,9 @@ if (error) {
       <div
         className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
       >
-
       <h1 className="headline--login">Login</h1>
       </div>
-      <div
-        className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8"
-      >
+      <div className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8">
         <div className="input__field flex w-full flex-col relative">
           <label htmlFor="email"></label>
           <input
