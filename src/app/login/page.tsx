@@ -113,11 +113,11 @@ if (error) {
         <p className={"md:w-[400px] flex justify-end mt-2"}>
 
         <span className='text-sm'>Du hast noch keinen Account? Hier geht's zur 
-          
+        <span> </span>
         <span 
           onClick={() => router.push('/registration')}
           className="text-sm text-blue-500 cursor-pointer">
-           &nbsp;Registrierung
+          Registrierung
         </span>
             </span>
             </p>
