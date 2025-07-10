@@ -7,7 +7,10 @@
 }
  .body {
         background: black;
-    }
+}
+.header {
+    z-index: 1;
+}
 
 @media screen and (min-width: 768px) {
     .body {
@@ -15,5 +18,8 @@
         justify-self: center;
         background: black;
         width: 756px;
+    }
+    .header {
+        z-index: 1;
     }
 }
