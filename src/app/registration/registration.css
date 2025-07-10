@@ -48,14 +48,13 @@
     width: 100%;
     padding: 12px 14px;
     font-size: 18px;
-    color: var(--main-color);
+    color: var(--black-color);
     box-sizing: border-box;
     border: 1px solid black;
-    opacity: 0.4;
     border-radius: 5px;
 }
 .floating-label {
-    color: var(--main-color);
+    color: var(--black-color);
     position: absolute;
     pointer-events: none;
     left: 18px;

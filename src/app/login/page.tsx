@@ -6,6 +6,7 @@ import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
 import { useRouter } from 'next/navigation';
 import "./login.css";
 import { cn } from '@/lib/utils';
+import styles from './styles.module.css';
 
 export default function LoginPage() {
   const supabase = createClient();  
@@ -49,12 +50,14 @@ if (error) {
   return (
     <div className="container--login w-full flex flex-col items-center">
       <div
-        className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
+        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
       <h1 className="headline--login">Instagram Video Downloader</h1>
       <h1 className="headline--login">Anmeldung</h1>
       </div>
-      <div className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8">
+      <div 
+        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8')}
+      >
         <div className="input__field flex w-full flex-col relative">
           <label htmlFor="email"></label>
           <input
@@ -112,10 +115,10 @@ if (error) {
         </button>
         <p className={"md:w-[400px] flex justify-end mt-2"}>
 
-        <span className='text-sm'>Du hast noch keinen Account? Hier geht&apos;s zur 
+        <span className='text-sm text-white text-base'>Du hast noch keinen Account? Hier geht&apos;s zur 
         <span 
           onClick={() => router.push('/registration')}
-          className="text-sm text-blue-500 cursor-pointer"
+          className="text-sm text-blue-500 cursor-pointer text-base"
           style={{top: '1px', position: 'relative'}}>
           &nbsp;Registrierung
         </span>

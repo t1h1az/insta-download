@@ -45,7 +45,6 @@ export function InstagramVideoForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const { postUrl } = values;
     try {
-      console.log("getting video info", postUrl);
       const videoInfo = await getVideoInfo({ postUrl });
 
       const { filename, videoUrl } = videoInfo;
@@ -57,14 +56,8 @@ export function InstagramVideoForm() {
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="bg-accent/20 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8"
-      >
-        <div className="mb-2 h-6 w-full px-2 text-start text-red-500">
+      <form onSubmit={form.handleSubmit(onSubmit)}>
           {httpError}
-        </div>
-        <div className="relative mb-6 flex w-full flex-col items-center gap-4 sm:flex-row">
           <FormField
             control={form.control}
             name="postUrl"
@@ -95,7 +88,6 @@ export function InstagramVideoForm() {
             )}
             Download
           </Button>
-        </div>
       </form>
     </Form>
   );

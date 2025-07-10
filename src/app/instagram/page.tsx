@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 import { createClient } from "@/lib/supabase/server";
 import { cn } from "@/lib/utils";
 import styles from './page.module.css';
+import './instagram.css';
 
 export default async function HomePage() {
   console.log('hit instagram page');
@@ -12,15 +13,17 @@ export default async function HomePage() {
     redirect('/login')
   }
   return (
-      <section className="flex w-full items-center justify-center flex-col py-8">
-        <div className="flex flex-col justify-center column">
-          <div className="flex w-full justify-center">
-            <h1 className={cn(styles.headline, "text-3xl font-bold text-center")}>
-            Instagram Video Downloader
-              </h1>
-          </div>
+      <div className="container--login w-full flex flex-col items-center">
+         <div
+        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
+      >
+        <h1 className="headline--login">Instagram Video Downloader</h1>
+      </div>
+        <div 
+          className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8')}
+        >
+          <InstagramVideoForm />
         </div>
-        <InstagramVideoForm />
-      </section >
+      </div >
   );
 }

@@ -5,8 +5,8 @@ import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
 import "./registration.css";
 import { redirect, useRouter} from 'next/navigation';
-
-
+import { cn } from "@/lib/utils";
+import styles from './styles.module.css';
 
 export default function LoginPage() {
   const supabase = createClient();
@@ -49,12 +49,14 @@ export default function LoginPage() {
   return (
     <div className="container--login w-full flex flex-col items-center">
       <div
-        className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-2 pt-2 shadow-md sm:px-8"
+        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
-      <h1 className="headline--login">Instagram Video Downloader</h1>
-      <h1 className="headline--login">Registrierung</h1>
+        <h1 className="headline--login">Instagram Video Downloader</h1>
+        <h1 className="headline--login">Registrierung</h1>
       </div>
-      <div className="bg-accent/40 my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8">
+      <div 
+        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8')}
+        >
         <div className="input__field flex w-full flex-col relative">
           <label htmlFor="email"></label>
           <input
@@ -111,10 +113,10 @@ export default function LoginPage() {
         </button>
          <p className={"md:w-[400px] flex justify-end mt-2"}>
 
-        <span className='text-sm'>Du hast schon einen Account? Hier geht&apos;s zur 
+        <span className='text-sm text-white text-base'>Du hast schon einen Account? Hier geht&apos;s zur 
         <span 
           onClick={() => router.push('/login')}
-          className="text-sm text-blue-500 cursor-pointer"
+          className="text-sm text-blue-500 cursor-pointer text-base"
           style={{top: '1px', position: 'relative'}}
         >
            &nbsp;Anmeldung
