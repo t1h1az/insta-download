@@ -8,7 +8,7 @@ const PrivacyPolicyPage = () => {
         <p className="mb-2">
           <span className="font-semibold">1.1.</span> This Privacy Policy
           (Policy) informs users that the website
-          <span className="text-gray-900 dark:text-gray-500">
+          <span className="text-gray-900 text-gray-500">
             {" "}
             (https://insta-video-saver.vercel.app)
           </span>{" "}

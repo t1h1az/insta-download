@@ -75,6 +75,7 @@ if (error) {
             required
             placeholder=''
             value={email}
+            autoComplete='email'
             onChange={(e) => setEmail(e.target.value)}
           />
           <span className="floating-label">Emailadresse</span>
@@ -91,7 +92,9 @@ if (error) {
             placeholder=''
             type={showPassword ? 'text' : 'password'}
             value={password}
-            onChange={(e) => setPassword(e.target.value)} />
+            onChange={(e) => setPassword(e.target.value)} 
+            autoComplete='password'
+          />
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}

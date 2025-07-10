@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning style={{backgroundColor: 'black'}}>
+    <html lang="en" suppressHydrationWarning style={{backgroundColor: 'black'}} className="light">
       <body
         className={cn(
           fontSans.variable,

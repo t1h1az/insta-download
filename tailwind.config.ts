@@ -89,7 +89,7 @@ const config = {
 export default config;
 
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("dark"));
+  let allColors = flattenColorPalette(theme("light"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );

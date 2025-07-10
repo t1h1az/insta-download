@@ -49,6 +49,7 @@
     padding: 12px 14px;
     font-size: 18px;
     color: var(--black-color);
+        background-color: var(--main-color);
     box-sizing: border-box;
     border: 1px solid black;
     border-radius: 5px;
