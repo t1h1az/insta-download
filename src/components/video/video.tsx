@@ -9,7 +9,7 @@ export function Video() {
       loop
       width="756" 
       height="240" 
-      controls preload="none"
+      preload="auto"
       poster="images/porsches-and-horses.png"
       playsInline
     >
