@@ -11,6 +11,7 @@ export function Video() {
       height="240" 
       controls preload="none"
       poster="images/porsches-and-horses.png"
+      playsInline
     >
       <source src="videos/porsche_horses.mp4" type="video/mp4" />
       Your browser does not support the video tag.
