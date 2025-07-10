@@ -4,7 +4,7 @@ import { createClient } from '@/lib/supabase/client';
 import { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
 import "./registration.css";
-import { redirect, useRouter} from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import { cn } from "@/lib/utils";
 import styles from './styles.module.css';
 import { Video } from '@/components/video/video';
@@ -52,25 +52,24 @@ export default function LoginPage() {
       <div
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
-        <h1 className="headline--login">Instagram Video Downloader</h1>
-        </div>
-        <div
+        <h1 className="headline--login">Account erstellen</h1>
+      </div>
+      <div
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
-        
-        {/* <h1 className="headline--login">Account erstellen</h1> */}
-        <p style={{ color: 'white'}}>Hier kannst du einen Account für den Instagram Downlooader erstellen. Gib deine Emailadresse an und vergib ein Passwort. Danach bekommst du eine Email um deinen Account zu aktivieren. Den Link für den Login findest du unten.</p>
+
+        <p style={{ color: 'white' }}>Hier kannst du einen Account für den Instagram Downloader erstellen. Du bekommst eine Email um deinen Account zu aktivieren.</p>
       </div>
-      <div 
+      <div
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-8 pt-8 shadow-md sm:px-8')}
-        >
+      >
         <div className="input__field flex w-full flex-col relative">
           <label htmlFor="email"></label>
           <input
             className="input h-12 w-full sm:pr-28"
-            id="email" 
-            name="email" 
-            type="email" 
+            id="email"
+            name="email"
+            type="email"
             required
             placeholder='' value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -83,9 +82,9 @@ export default function LoginPage() {
           <label htmlFor="password"></label>
           <input
             className="input h-12 w-full sm:pr-28"
-            id="password" 
-            name="password" 
-            required 
+            id="password"
+            name="password"
+            required
             placeholder=''
             type={showPassword ? 'text' : 'password'}
             value={password}
@@ -100,7 +99,7 @@ export default function LoginPage() {
           <span className="floating-label">Passwort</span>
           <span className='success__message'></span>
         </div>
-         {/* ✅ Newsletter checkbox 
+        {/* ✅ Newsletter checkbox 
             <label className="flex items-center mb-4 text-sm">
               <input
                 type="checkbox"
@@ -116,22 +115,19 @@ export default function LoginPage() {
           onClick={handleLogin}
           className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
         >
-          ACCOUNT ERSTELLEN
+          Account erstellen
         </button>
-         <p className={"md:w-[400px] flex row justify-end mt-2"}>
-        
-        <span className='text-white text-base sm:text-sm' style={{ textAlign: 'end'}}>Du hast schon einen Account? Hier geht&apos;s zur 
-        <span 
-          onClick={() => router.push('/login')}
-          className="text-blue-500 cursor-pointer text-base"
-          style={{top: '1px', position: 'relative'}}
-          >
-           &nbsp;Anmeldung
+        <p className={"w-full md:w-[400px] flex row justify-end mt-2 cursor-pointer "}
+        onClick={() => router.push('/login')}>
+
+          <span
+            className='text-white text-base sm:text-sm' style={{ textAlign: 'end' }}><span
+              className="text-blue-500 text-base"
+            >Hier</span> geht&apos;s zum Login
           </span>
-            </span>
-            </p>
+        </p>
       </div>
-      <Video/>
+      <Video />
     </div>
   )
 }

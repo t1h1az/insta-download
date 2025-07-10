@@ -50,12 +50,12 @@ if (error) {
   };
   return (
     <div className="container--login w-full flex flex-col items-center">
-      <div
+      {/* <div
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
       <h1 className="headline--login">Instagram Video Downloader</h1>
 
-      </div>
+      </div> */}
       <div
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
@@ -63,7 +63,7 @@ if (error) {
       <h1 className="headline--login">Login</h1>
       </div>
       <div 
-        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8')}
+        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-8 pt-8 shadow-md sm:px-8')}
       >
         <div className="input__field flex w-full flex-col relative">
           <label htmlFor="email"></label>
@@ -119,7 +119,7 @@ if (error) {
               >
                 Anmelden
               </button>
-               <p className={"md:w-[400px] flex row justify-end mt-2"}>
+               <p className={"w-full md:w-[400px] flex row justify-end mt-2"}>
               
               <span className='text-white md:text-base sm:text-sm' style={{ textAlign: 'end'}}>Du hast noch keinen Account? Hier geht&apos;s zur 
               <span 
