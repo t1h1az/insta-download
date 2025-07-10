@@ -1,9 +1,6 @@
-/* .headline {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-} */
-
 .blur {
-    backdrop-filter: blur(20px);
-    background-color: #00000022;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #ffffff0d;
     border: 1px solid #a5919173;
 }

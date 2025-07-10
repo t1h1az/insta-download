@@ -7,6 +7,7 @@ import "./registration.css";
 import { redirect, useRouter} from 'next/navigation';
 import { cn } from "@/lib/utils";
 import styles from './styles.module.css';
+import { Video } from '@/components/video/video';
 
 export default function LoginPage() {
   const supabase = createClient();
@@ -52,10 +53,16 @@ export default function LoginPage() {
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
         <h1 className="headline--login">Instagram Video Downloader</h1>
-        <h1 className="headline--login">Registrierung</h1>
+        </div>
+        <div
+        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
+      >
+        
+        {/* <h1 className="headline--login">Account erstellen</h1> */}
+        <p style={{ color: 'white'}}>Hier kannst du einen Account für den Instagram Downlooader erstellen. Gib deine Emailadresse an und vergib ein Passwort. Danach bekommst du eine Email um deinen Account zu aktivieren. Den Link für den Login findest du unten.</p>
       </div>
       <div 
-        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8')}
+        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-8 pt-8 shadow-md sm:px-8')}
         >
         <div className="input__field flex w-full flex-col relative">
           <label htmlFor="email"></label>
@@ -109,21 +116,22 @@ export default function LoginPage() {
           onClick={handleLogin}
           className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
         >
-          Registrieren
+          ACCOUNT ERSTELLEN
         </button>
-         <p className={"md:w-[400px] flex justify-end mt-2"}>
-
-        <span className='text-sm text-white text-base'>Du hast schon einen Account? Hier geht&apos;s zur 
+         <p className={"md:w-[400px] flex row justify-end mt-2"}>
+        
+        <span className='text-white text-base sm:text-sm' style={{ textAlign: 'end'}}>Du hast schon einen Account? Hier geht&apos;s zur 
         <span 
           onClick={() => router.push('/login')}
-          className="text-sm text-blue-500 cursor-pointer text-base"
+          className="text-blue-500 cursor-pointer text-base"
           style={{top: '1px', position: 'relative'}}
-        >
+          >
            &nbsp;Anmeldung
-        </span>
+          </span>
             </span>
             </p>
       </div>
+      <Video/>
     </div>
   )
 }

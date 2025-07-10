@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import "./login.css";
 import { cn } from '@/lib/utils';
 import styles from './styles.module.css';
+import { Video } from '@/components/video/video';
 
 export default function LoginPage() {
   const supabase = createClient();  
@@ -53,7 +54,13 @@ if (error) {
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
       <h1 className="headline--login">Instagram Video Downloader</h1>
-      <h1 className="headline--login">Anmeldung</h1>
+
+      </div>
+      <div
+        className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
+      >
+        
+      <h1 className="headline--login">Login</h1>
       </div>
       <div 
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-16 pt-8 shadow-md sm:px-8')}
@@ -106,25 +113,27 @@ if (error) {
               Sign up for our newsletter
             </label>*/}
         {error && <p className="text-red-500 mb-4">{error}</p>}
+         <button
+                onClick={handleLogin}
+                className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
+              >
+                Anmelden
+              </button>
+               <p className={"md:w-[400px] flex row justify-end mt-2"}>
+              
+              <span className='text-white md:text-base sm:text-sm' style={{ textAlign: 'end'}}>Du hast noch keinen Account? Hier geht&apos;s zur 
+              <span 
+                onClick={() => router.push('/registration')}
+                className="text-blue-500 cursor-pointer md:text-base sm:text-sm"
+                style={{top: '1px', position: 'relative'}}
+                >
+                 &nbsp;Registrierung
+                </span>
+                  </span>
+                  </p>
+            </div>
+            <Video/>
 
-        <button
-          onClick={handleLogin}
-          className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
-        >
-          Anmelden
-        </button>
-        <p className={"md:w-[400px] flex justify-end mt-2"}>
-
-        <span className='text-sm text-white text-base'>Du hast noch keinen Account? Hier geht&apos;s zur 
-        <span 
-          onClick={() => router.push('/registration')}
-          className="text-sm text-blue-500 cursor-pointer text-base"
-          style={{top: '1px', position: 'relative'}}>
-          &nbsp;Registrierung
-        </span>
-            </span>
-            </p>
-      </div>
     </div>
   )
 }

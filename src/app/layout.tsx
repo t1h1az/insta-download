@@ -38,7 +38,7 @@ export default function RootLayout({
           "overflow-x-hidden bg-background items-left font-sans antialiased h-full flex flex-col shrink-0 md:w-5xl",
         )}
         style={{
-          background: `url(${backgroundImage.src})`,
+          background: `black`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
