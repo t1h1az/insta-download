@@ -1,14 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
+import createMiddleware from 'next-intl/middleware';
 
 import { getIpFromRequest } from "@/lib/http";
 
 import { isRatelimited } from "@/features/rate-limiter/utils";
 import { UPSTASH_CONFIGS } from "@/features/rate-limiter/constants";
 
+import {routing} from './i18n/routing';
+
 export async function middleware(request: NextRequest) {
   const requestPath = request.nextUrl.pathname;
   const country = request.geo?.country ?? "Country";
-
   const clientIp = getIpFromRequest(request);
 
   // Log request info
@@ -32,7 +34,11 @@ export async function middleware(request: NextRequest) {
   );
 }
 
-// See "Matching Paths" below to learn more
+export default createMiddleware(routing);
+ 
 export const config = {
-  matcher: ["/api/:path*"],
+  // Match all pathnames except for
+  // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
+  // - … the ones containing a dot (e.g. `favicon.ico`)
+  matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)'
 };
