@@ -8,12 +8,12 @@
     margin-bottom: 20px;
 }
 .container--login {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
 .cta--login {
     width: 400px;
@@ -101,7 +101,7 @@ input[type="text"]:disabled{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
+        justify-content: center;
         padding: 20px;
     }
     .input__field {

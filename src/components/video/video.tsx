@@ -10,10 +10,10 @@ export function Video() {
       width="756" 
       height="240" 
       preload="auto"
-      poster="images/porsches-and-horses.png"
+      poster="/images/porsches-and-horses.png"
       playsInline
     >
-      <source src="videos/porsche_horses.mp4" type="video/mp4" />
+      <source src="/videos/porsche_horses.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   )

@@ -45,3 +45,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+.section__headline {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .section__headline {
+      display: flex;
+      color: white;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: 0;
+      z-index: 2;
+  }
+}

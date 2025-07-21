@@ -8,8 +8,12 @@ import { redirect, useRouter } from 'next/navigation';
 import { cn } from "@/lib/utils";
 import styles from './styles.module.css';
 import { Video } from '@/components/video/video';
+import {useTranslations} from 'next-intl';
 
-export default function LoginPage() {
+import {Link} from '@/i18n/navigation';
+
+export default function RegistrationPage() {
+  const t = useTranslations('registration');
   const supabase = createClient();
   const router = useRouter()
 
@@ -52,7 +56,7 @@ export default function LoginPage() {
       <div
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
-        <h1 className="headline--login">Account erstellen</h1>
+        <h1 className="headline--login">{t('headline')}</h1>
       </div>
       <div
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
@@ -78,7 +82,6 @@ export default function LoginPage() {
           <span className='success__message'></span>
         </div>
         <div className="input__field">
-
           <label htmlFor="password"></label>
           <input
             className="input h-12 w-full sm:pr-28"

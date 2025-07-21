@@ -1,6 +1,8 @@
+import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {routing} from '@/i18n/routing';
+ 
 import { Metadata} from "next";
 import { DM_Sans as FontSans } from "next/font/google";
-import backgroundImage from "../../public/images/porsches-and-horses.png";
 import { Footer } from "@/components/footer";
 import Image from 'next/image'
 
@@ -11,7 +13,7 @@ import { ReactQueryProvider } from "@/components/providers/react-query-provider"
 import { cn } from "@/lib/utils";
 
 import styles from './styles.module.css'
-import "./globals.css";
+import  "./globals.css";
 import Link from "next/link";
 
 const fontSans = FontSans({
@@ -24,13 +26,17 @@ export const metadata: Metadata = {
   description: "Download Instagram Videos with AEY Studios",
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
+  params
 }: {
   children: React.ReactNode;
+  params: Promise<{locale: string}>;
 }) {
+  const {locale} = await params;
+
   return (
-    <html lang="en" suppressHydrationWarning style={{backgroundColor: 'black'}} className="light">
+    <html lang={locale} suppressHydrationWarning style={{backgroundColor: 'black'}} className="light">
       <body
         className={cn(
           fontSans.variable,
@@ -45,6 +51,8 @@ export default function RootLayout({
           height: '100vh',
         }}
       >
+        <NextIntlClientProvider>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -62,6 +70,7 @@ export default function RootLayout({
                   className="md:w-40 w-60 h-auto"
                 />
               </Link>
+              <h2 className="section__headline">Instagram Video Downloader</h2>
             </header>
             <main className={"flex h-full justify-center overflow-y-auto px-2 sm:w-full"}>
               {children}
@@ -69,6 +78,7 @@ export default function RootLayout({
             <Footer></Footer>
           </ReactQueryProvider>
         </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

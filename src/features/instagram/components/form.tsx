@@ -79,7 +79,7 @@ export function InstagramVideoForm() {
           <Button
             disabled={isPending}
             type="submit"
-            className="right-1 top-1 w-full sm:absolute sm:w-fit"
+            className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
           >
             {isPending ? (
               <Loader2 className="mr-2 animate-spin" />
