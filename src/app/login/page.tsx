@@ -126,7 +126,7 @@ export default function LoginPage() {
 
           <span className='text-white md:text-base sm:text-sm' style={{ textAlign: 'end' }}>Du hast noch keinen Account? Hier geht&apos;s zur
             <span
-              onClick={() => router.push('/de/registration')}
+              onClick={() => router.push('/registration')}
               className="text-blue-500 cursor-pointer md:text-base sm:text-sm"
               style={{ top: '1px', position: 'relative' }}
             >
