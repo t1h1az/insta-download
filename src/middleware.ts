@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import createMiddleware from 'next-intl/middleware';
+import { geolocation} from '@vercel/functions'
 
 import { getIpFromRequest } from "@/lib/http";
 
@@ -10,7 +11,7 @@ import {routing} from './i18n/routing';
 
 export async function middleware(request: NextRequest) {
   const requestPath = request.nextUrl.pathname;
-  const country = request.geo?.country ?? "Country";
+  const { country } = geolocation(request) ?? "Country";
   const clientIp = getIpFromRequest(request);
 
   // Log request info
