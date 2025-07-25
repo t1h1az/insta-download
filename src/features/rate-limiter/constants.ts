@@ -9,7 +9,7 @@ const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN ?? "";
 const enabled = USE_UPSTASH === "false";
 
 // Ratelimit configs
-const maxRequests = 5; // Max requests every requests window
+const maxRequests = 10; // Max requests every requests window
 const requestsWindow: Duration = "1 m"; // 5 requests allowed every 1 min
 
 // Ban configs

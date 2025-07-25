@@ -62,7 +62,7 @@ export default function RegistrationPage() {
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
 
-        <p style={{ color: 'white' }}>Hier kannst du einen Account für den Instagram Downloader erstellen. Du bekommst eine Email um deinen Account zu aktivieren.</p>
+        <p style={{ color: 'white' }}>Create your account here. You'll receive an email from supabase to active the account.</p>
       </div>
       <div
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-8 pt-8 shadow-md sm:px-8')}
@@ -78,7 +78,7 @@ export default function RegistrationPage() {
             placeholder='' value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <span className="floating-label">Emailadresse</span>
+          <span className="floating-label">Emailaddress</span>
           <span className='success__message'></span>
         </div>
         <div className="input__field">
@@ -99,7 +99,7 @@ export default function RegistrationPage() {
           >
             {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
           </button>
-          <span className="floating-label">Passwort</span>
+          <span className="floating-label">Password</span>
           <span className='success__message'></span>
         </div>
         {/* ✅ Newsletter checkbox 
@@ -118,15 +118,16 @@ export default function RegistrationPage() {
           onClick={handleLogin}
           className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
         >
-          Account erstellen
+          Create Account
         </button>
         <p className={"w-full md:w-[400px] flex row justify-end mt-2 cursor-pointer "}
         onClick={() => router.push('/login')}>
 
           <span
-            className='text-white text-base sm:text-sm' style={{ textAlign: 'end' }}><span
+            className='text-white md:text-base sm:text-sm' style={{ textAlign: 'end' }}>
+              Already have an account?<span
               className="text-blue-500 text-base"
-            >Hier</span> geht&apos;s zum Login
+            >&nbsp;Login</span>
           </span>
         </p>
       </div>

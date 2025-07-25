@@ -78,7 +78,7 @@ export default function LoginPage() {
             autoComplete='email'
             onChange={(e) => setEmail(e.target.value)}
           />
-          <span className="floating-label">Emailadresse</span>
+          <span className="floating-label">Emailaddress</span>
           <span className='success__message'></span>
         </div>
         <div className="input__field">
@@ -102,7 +102,7 @@ export default function LoginPage() {
           >
             {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
           </button>
-          <span className="floating-label">Passwort</span>
+          <span className="floating-label">Password</span>
           <span className='success__message'></span>
         </div>
         {/* ✅ Newsletter checkbox 
@@ -120,18 +120,15 @@ export default function LoginPage() {
           onClick={handleLogin}
           className="cta--login w-400 bg-black text-white p-2 rounded hover:bg-gray-800"
         >
-          Anmelden
+          Login
         </button>
         <p className={"w-full md:w-[400px] flex row justify-end mt-2"}>
 
-          <span className='text-white md:text-base sm:text-sm' style={{ textAlign: 'end' }}>Du hast noch keinen Account? Hier geht&apos;s zur
+          <span className='text-white md:text-base sm:text-sm' style={{ textAlign: 'end' }}>No account yet? Click
             <span
               onClick={() => router.push('/registration')}
               className="text-blue-500 cursor-pointer md:text-base sm:text-sm"
-              style={{ top: '1px', position: 'relative' }}
-            >
-              &nbsp;Registrierung
-            </span>
+            >&nbsp;here&nbsp;</span>to create one
           </span>
         </p>
       </div>

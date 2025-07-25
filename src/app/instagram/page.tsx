@@ -58,7 +58,7 @@ export default function HomePage() {
             value={downloadURL}
             onChange={(e) => setDownloadURL(e.target.value)}
           />
-          <span className="floating-label">https://instagram.com/...</span>
+          <span className="floating-label">Paste your instagram link here</span>
           <span className='success__message'></span>
         </div>
         <button
@@ -68,14 +68,14 @@ export default function HomePage() {
           Click To Download
         </button>
       </div> 
-      <div
+      {/* <div
           className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
         >
           <p className={'text-white'}>Den Link bekommt ihr bei Instagram. <br />
               <span>In der App geht ihr auf Reel teilen und kopiert den Link.</span><br />
               <span>Im Browser klickt ihr einfach den Reel an und kopiert euch dann den Link</span><br />
           </p>
-        </div>
+        </div> */}
         <Video />
       </div >
   );
