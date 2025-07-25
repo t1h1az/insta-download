@@ -21,9 +21,9 @@ export function Footer() {
             Privacy Policy
           </Link> */}
         </p>
-        <span className="text-sm text-gray-400">
+        {/* <span className="text-sm text-gray-400">
           © {new Date().getFullYear()} AEY Studios LLC. All rights reserved.
-        </span>
+        </span> */}
       </div></footer>
   </>
   );
