@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { ipAddress } from '@vercel/functions'
 
 import { CustomError, HTTPError } from "./errors";
 import { ErrorResponse, SuccessResponse } from "@/types";
@@ -36,7 +37,7 @@ export function isNotFoundError(error: any) {
 export const getIpFromRequest = (request: NextRequest) => {
   let ip: string | null;
 
-  ip = request.ip ?? request.headers.get("x-real-ip");
+  ip = ipAddress(request) ?? request.headers.get("x-real-ip");
   const forwardedFor = request.headers.get("x-forwarded-for");
 
   if (!ip && forwardedFor) {
