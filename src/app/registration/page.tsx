@@ -2,7 +2,7 @@
 
 import { createClient } from '@/lib/supabase/client';
 import { useState } from 'react';
-import { Eye, EyeOff } from 'lucide-react'; // Eye icons from lucide-react
+import { Eye, EyeOff } from 'lucide-react';
 import "./registration.css";
 import { redirect, useRouter } from 'next/navigation';
 import { cn } from "@/lib/utils";
@@ -62,7 +62,7 @@ export default function RegistrationPage() {
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg px-4 pb-2 pt-2 shadow-md sm:px-8')}
       >
 
-        <p style={{ color: 'white' }}>Create your account here. You'll receive an email from supabase to active the account.</p>
+        <p style={{ color: 'white' }}>Create your account here. You&apos;ll receive an email from supabase to active the account.</p>
       </div>
       <div
         className={cn(styles.blur, 'my-4 flex w-full max-w-2xl flex-col items-center rounded-lg border px-4 pb-8 pt-8 shadow-md sm:px-8')}
