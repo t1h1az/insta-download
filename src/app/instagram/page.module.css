@@ -2,6 +2,7 @@
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: #ffffff0d;
-    border: 1px solid #a5919173;
+    border: 1px solid rgb(49 37 37 / 21%);
     z-index: 1;
+    border-radius: 10px;
 }
