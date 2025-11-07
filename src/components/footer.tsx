@@ -21,9 +21,10 @@ export function Footer() {
             Privacy Policy
           </Link> */}
         </p>
-        {/* <span className="text-sm text-gray-400">
-          © {new Date().getFullYear()} AEY Studios LLC. All rights reserved.
-        </span> */}
+        <Link href="https://aey-studios.com" className="footer__aey-link">
+          <span className="text-sm text-gray-400">
+            © {new Date().getFullYear()} AEY Studios LLC. All rights reserved.
+          </span></Link>
       </div></footer>
   </>
   );

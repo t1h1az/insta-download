@@ -45,6 +45,18 @@
     @apply bg-background text-foreground;
   }
 }
+.footer__aey-link {
+  color: #ffffffa1;
+    cursor: pointer;
+    z-index: 2;
+    box-sizing: border-box;
+    border-bottom: 1px solid transparent;
+}
+
+.footer__aey-link:hover {
+  color: #f6f6f6;
+  border-bottom: 1px solid #f6f6f6;
+}
 
 .section__headline {
   display: none;
