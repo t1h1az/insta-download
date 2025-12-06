@@ -13,7 +13,7 @@ export function ReactQueryProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const clientRef = React.useRef<QueryClient>();
+  const clientRef = React.useRef<QueryClient>(null);
 
   if (!clientRef.current) {
     clientRef.current = new QueryClient({

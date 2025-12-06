@@ -1,8 +1,0 @@
-.blur {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: #ffffff0d;
-    border: 1px solid #a5919173;
-    z-index: 1;
-}
-

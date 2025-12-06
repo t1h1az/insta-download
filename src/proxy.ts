@@ -7,18 +7,11 @@ import { getIpFromRequest } from "@/lib/http";
 import { isRatelimited } from "@/features/rate-limiter/utils";
 import { UPSTASH_CONFIGS } from "@/features/rate-limiter/constants";
 
-import {routing} from './i18n/routing';
-
-export async function middleware(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
   const requestPath = request.nextUrl.pathname;
   const { country } = geolocation(request) ?? "Country";
   const clientIp = getIpFromRequest(request);
 
-  // Log request info
-  console.log(`${request.method} ${clientIp} (${country}) -> ${requestPath}`);
-
-  // If there IP is not provided we skip rate limiting because its what we are using as an identifier
-  // typically you would use the user ID but we don't have authentication implemented
   if (!clientIp) return NextResponse.next();
 
   // Check if ratelimit is successful
@@ -35,8 +28,6 @@ export async function middleware(request: NextRequest) {
   );
 }
 
-export default createMiddleware(routing);
- 
 export const config = {
   // Match all pathnames except for
   // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
